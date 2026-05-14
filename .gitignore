@@ -1,0 +1,17 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+.gitattributes
+
+# Kaggle credentials
+.kaggle/
+kaggle.json
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

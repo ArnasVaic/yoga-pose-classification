@@ -34,7 +34,7 @@ def count_folders(path):
 path = Path(path)
 
 for set in ['train', 'test', 'valid']:    
-    samples, classes = count_classes_and_samples(path / 'train')
+    samples, classes = count_classes_and_samples(path / set)
     print(f'{set} size: {samples}, classes: {classes}')
     
 # %% Image resolution stats
@@ -122,6 +122,7 @@ print("Classes:", num_classes)
 # %%
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
+print("Device to be used: ", device)
 
 model = models.efficientnet_b0(weights="IMAGENET1K_V1")
 
